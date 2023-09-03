@@ -1,8 +1,13 @@
 $primary: #BF8360;
 $secondary: #182126;
+$light: #D0D9D9;
 
 .primary-bg {
     background-color: $primary;
+}
+
+.light-bg {
+    background-color: $light;
 }
 
 h1,
