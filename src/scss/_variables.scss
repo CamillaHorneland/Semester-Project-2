@@ -1,0 +1,11 @@
+$primary: #BF8360;
+$secondary: #182126;
+
+.primary-bg {
+    background-color: $primary;
+}
+
+h1,
+.nav-link {
+    color: $secondary;
+}
