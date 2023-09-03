@@ -30,7 +30,8 @@ h1 {
 }
 
 .navbar-toggler-image {
-    width: 70px;
+    width: 80px;
+    margin-top: 65%;
 }
 
 .navbar-toggler:focus {
@@ -40,11 +41,35 @@ h1 {
 .navbar-nav,
 #search {
     background-color: $primary;
-   
+    margin-top: 0;
 }
 
 #search {
-    text-align: end;
-    
+    margin-top: 4px;
+    height: 45px;
+}
 
+
+@media (max-width: 991px) {
+
+    .containerSearch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+    }
+
+    #search {
+        width: 50%;   
+        margin-top: 0px; 
+        margin-bottom: 20px;
+    }
+        
+}
+
+@media (max-width: 360px) {
+
+    .navbar-toggler-image {
+            margin-top: 0;
+        }
 }
