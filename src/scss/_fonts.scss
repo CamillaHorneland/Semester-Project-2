@@ -1,0 +1,66 @@
+h1 {
+    font-size: 50px;
+    font-family: "FjordOne-Regular";
+    font-weight: 900;
+    color: $secondary;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: "Josefin Sans";
+    font-weight: 600;
+    color: $dark;
+}
+
+h3 {
+    font-size: 35px;
+    font-family: "FjordOne-Regular";
+    font-weight: 600;
+    color: $secondary;
+}
+
+h4 {
+    font-size: 30px;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    color: $secondary;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    color: $secondary;
+}
+
+h6 {
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+    color: $secondary;
+}
+
+p {
+   font-size: 20px;
+   font-family: "Poppins-Black";
+   color: $secondary;
+}
+
+.nav-link {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    margin: 10px;
+    color: $secondary;
+}
+
+.btn-primary,
+.support {
+    font-size: 25px;
+    font-family: "Josefin Sans";
+}
+
+.btn-light {
+    font-size: 20px;
+    font-family: "Josefin Sans";
+    color: $dark;
+}
+
