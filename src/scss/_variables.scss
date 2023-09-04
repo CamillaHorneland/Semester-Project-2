@@ -2,11 +2,13 @@ $primary: #BF8360;
 $secondary: #182126;
 $light: #D0D9D9;
 
-.primary-bg {
+.primary-bg,
+.btn-primary {
     background-color: $primary;
 }
 
-.light-bg {
+.light-bg,
+.btn-light {
     background-color: $light;
 }
 
