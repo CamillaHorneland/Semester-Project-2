@@ -3,11 +3,13 @@ footer {
 }
 
 .h1footer {
+    color: $dark;
     padding-top: 80px;
 }
 
 .support {
     color: #182126;
+    text-decoration: none;
 }
 
 .support:hover {

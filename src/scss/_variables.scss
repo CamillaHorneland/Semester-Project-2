@@ -1,18 +1,14 @@
 $primary: #BF8360;
 $secondary: #182126;
 $light: #D0D9D9;
+$dark:  #273940;
 
-.primary-bg,
-.btn-primary {
+.primary-bg {
     background-color: $primary;
 }
 
-.light-bg,
-.btn-light {
+.light-bg {
     background-color: $light;
 }
 
-h1,
-.nav-link {
-    color: $secondary;
-}
+
