@@ -3,6 +3,21 @@ h1 {
     font-family: "FjordOne-Regular";
     font-weight: 900;
     color: $secondary;
+    text-decoration: none;
+}
+
+.h1footer a,
+h1 a {
+    text-decoration: none;
+    color: $secondary;
+}
+
+h1 a:hover {
+    color: $light;
+}
+
+.h1footer a:hover {
+    color: $primaryDark;
 }
 
 h2 {
