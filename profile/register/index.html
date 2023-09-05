@@ -6,21 +6,20 @@
     <meta name="description" content="NorAutionOff a auctionhouse online - Semesterproject 2. Register new user.">
     <title>Nor Auction Off|Register</title>
     <link rel="shortcut icon" type="inamge/ping" href="/img/Favicon – lite.jpeg">
-    <link rel="stylesheet" type="text/css" href="/dist/css/index.css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="/src/js/index.js" defer type="module"></script>
+    <link rel="stylesheet" type="text/css" href="/dist/css/index.css" />
+    <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
 <body>
     <header class="primary-bg">
         <div class="containerName">
-            <h1 class="text-center">Nor AUCTION Off</h1>
+            <h1 class="text-center"><a href="../../index.html">Nor AUCTION Off</a></h1>
         </div>
     </header>
     <main>
         <h2 class="m-5">Register</h2>
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <div id="message"></div>
                 <form id="registerForm">
                     <fieldset>
                         <div class="form-group m-4 pb-3">
@@ -41,15 +40,16 @@
                         </div>
                         <div class="form-group m-4 pb-3">
                             <label for="media" class="pb-2">Avatar URL</label>
-                            <input class="form-control bg-light" type="avatar" name="avatar" required minlength="8"
-                                title="The password value must be at least 8 characters.">
+                            <textarea class="form-control bg-light" type="avatar" name="avatar" rows="1"></textarea>
                         </div>
                         <div class="text-center m-4">
                             <p>Already have a profile?</p>
                             <a href="/profile/login" class="mb-5 support">Log in here!</a>
                         </div>
+                        <div id="message"></div>
+                        <div id="loginButton" class="text-center m-5"><a href="/profile/login" class="btn btn-light m-4 w-50">Login</a></div>
                         <div class="d-flex justify-content-center m-5">
-                            <button class="btn btn-light text-center m-5">Register</button>
+                            <button class="btn btn-light text-center w-50 m-5">Register</button>
                         </div>
                     </fieldset>
                 </form>
@@ -57,7 +57,7 @@
         </div>
     </main>
     <footer class="light-bg text-center">
-        <h1 class="text-center h1footer">Nor AUCTION Off</h1>
+        <h1 class="text-center h1footer"><a href="../../index.html">Nor AUCTION Off</a></h1>
         <a href="mailto:support@example.com" class="m-5 support">Contact support</a>
         <h6 class="m-5">©Nor ACTION Off</h6>
     </footer>
