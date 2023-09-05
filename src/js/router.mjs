@@ -11,5 +11,7 @@ export default function router() {
   // listeners.setLogoutButtonListener();
   switch (path) {case '/profile/register/':
       listeners.setRegisterFormListener();
+      case '/profile/login/':
+      listeners.setLoginFormListener();
   }
 }
