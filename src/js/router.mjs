@@ -1,10 +1,10 @@
 import * as listeners from "./listeners/index.mjs";
-import buildeMenu from "./ui/common/buildMenu.mjs";
+import buildMenu from "./ui/common/buildMenu.mjs";
 import { redirectBasedOnLogin } from "./helpers/index.mjs";
 // import { setLogoutListener } from "./listeners/auth/logout";
 
 export default function router() {
-  const path = location.pathname;
+  const pathname = window.location.pathname;
 
   redirectBasedOnLogin(pathname);
 	buildMenu(pathname);
@@ -17,7 +17,7 @@ export default function router() {
   // console.log(user);
 
   listeners.setLogoutListener();
-  switch (path) { 
+  switch (pathname) { 
     case '/profile/register/':
       listeners.setRegisterFormListener()
       return;
