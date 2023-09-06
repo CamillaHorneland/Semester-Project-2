@@ -1,5 +1,5 @@
 import { register } from "../../api/auth/register.mjs";
-import displayMessage from "../../message/displayMessage.mjs";
+import displayMessage from "../../ui/common/displayMessage.mjs";
 
 export function setRegisterFormListener() {
   const form = document.querySelector("#registerForm");

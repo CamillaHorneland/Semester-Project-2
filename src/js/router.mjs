@@ -1,4 +1,5 @@
 import * as listeners from "./listeners/index.mjs";
+// import { setLogoutListener } from "./listeners/auth/logout";
 
 export default function router() {
   const path = location.pathname;
@@ -8,10 +9,13 @@ export default function router() {
   
   // console.log(user);
 
-  // listeners.setLogoutButtonListener();
-  switch (path) {case '/profile/register/':
-      listeners.setRegisterFormListener();
+  listeners.setLogoutListener();
+  switch (path) { 
+    case '/profile/register/':
+      listeners.setRegisterFormListener()
+      return;
       case '/profile/login/':
-      listeners.setLoginFormListener();
+      listeners.setLoginFormListener()
+      return;
   }
 }
