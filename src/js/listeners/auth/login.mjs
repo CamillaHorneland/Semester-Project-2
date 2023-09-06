@@ -1,5 +1,5 @@
 import { login } from "../../api/auth/login.mjs";
-import displayMessage from "../../message/displayMessage.mjs";
+import displayMessage from "../../ui/common/displayMessage.mjs";
 import * as storage from "../../storage/index.mjs";
 
 export function setLoginFormListener() {
