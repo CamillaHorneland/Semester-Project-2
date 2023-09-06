@@ -1,6 +1,6 @@
 import { login } from "../../api/auth/login.mjs";
 import displayMessage from "../../ui/common/displayMessage.mjs";
-import * as storage from "../../storage/index.mjs";
+import * as storage from "../../services/index.mjs";
 
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");

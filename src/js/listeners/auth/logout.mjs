@@ -1,4 +1,4 @@
-import * as storage from "../../storage/index.mjs";
+import * as storage from "../../services/index.mjs";
 
 export function setLogoutListener() {
     const logoutLink = document.querySelector(".logoutLink");
