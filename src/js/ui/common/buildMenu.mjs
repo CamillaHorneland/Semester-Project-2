@@ -12,13 +12,13 @@ export default function buildMenu(pathname) {
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/" || pathname === "/index.html" ? "active" : ""}" href="/">Auctions</a>
+            <a class="nav-link ${pathname === "/auction/allAuctions" ? "active" : ""}" href="/auction/allAuctions/index.html">Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/profile/user" || pathname === "/profile/user/index.html" ? "active" : ""}" href="/profile/user/index.html">Profile</a>
+            <a class="nav-link ${pathname === "/profile/user" ? "active" : ""}" href="/profile/user/index.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "profile/createAuction" || pathname === "/profile/createAuction/index.html" ? "active" : ""}" href="/profile/createAuction/index.html">Create Auction</a>
+            <a class="nav-link ${pathname === "profile/createAuction" ? "active" : ""}" href="/profile/createAuction/index.html">Create Auction</a>
           </li>
           <li class="nav-item">
             <a class="nav-link logoutLink">Log out</a>
@@ -42,7 +42,7 @@ export default function buildMenu(pathname) {
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/" || pathname === "/index.html" ? "active" : ""}" href="/">Auctions</a>
+            <a class="nav-link ${pathname === "/auction/allAuctions" ? "active" : ""}" href= "/auction/allAuctions/index.html">Auctions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link ${pathname === "/profile/login/" ? "active" : ""}" href="/profile/login/index.html">Log in</a>

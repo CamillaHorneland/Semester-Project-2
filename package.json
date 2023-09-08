@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/CamillaHorneland/Semester-Project-2#readme",
   "dependencies": {
-    "bootstrap": "^5.0.1"
+    "bootstrap": "^5.3.1"
   },
   "devDependencies": {
     "live-server": "^1.2.2",

@@ -22,7 +22,7 @@ export function setLoginFormListener() {
         const { accessToken, ...user} = await login(profile);
         storage.save("token", accessToken);
         storage.save("profile", user);
-        location.href = "../../../../index.html";
+        location.href = "/index.html";
       } catch (error) {
         displayMessage("danger", error, "#message");
         console.log(error);
