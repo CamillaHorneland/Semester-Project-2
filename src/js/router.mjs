@@ -6,6 +6,8 @@ import { redirectBasedOnLogin } from "./helpers/index.mjs";
 export default function router() {
   const pathname = window.location.pathname;
 
+  console.log(pathname);
+
   redirectBasedOnLogin(pathname);
 	buildMenu(pathname);
 
@@ -20,9 +22,9 @@ export default function router() {
   switch (pathname) { 
     case '/profile/register/':
       listeners.setRegisterFormListener()
-      return;
+      break;
       case '/profile/login/':
       listeners.setLoginFormListener()
-      return;
+      break;
   }
 }
