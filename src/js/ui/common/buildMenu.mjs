@@ -12,13 +12,13 @@ export default function buildMenu(pathname) {
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/auction/allAuctions" ? "active" : ""}" href="/auction/allAuctions/index.html">Auctions</a>
+            <a class="nav-link ${pathname === "/auction/allAuctions/" ? "active" : ""}" href="/auction/allAuctions/">Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/profile/user" ? "active" : ""}" href="/profile/user/index.html">Profile</a>
+            <a class="nav-link ${pathname === "/profile/user/" ? "active" : ""}" href="/profile/user/">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "profile/createAuction" ? "active" : ""}" href="/profile/createAuction/index.html">Create Auction</a>
+            <a class="nav-link ${pathname === "profile/createAuction/" ? "active" : ""}" href="/profile/createAuction/">Create Auction</a>
           </li>
           <li class="nav-item">
             <a class="nav-link logoutLink">Log out</a>
@@ -42,13 +42,13 @@ export default function buildMenu(pathname) {
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/auction/allAuctions" ? "active" : ""}" href= "/auction/allAuctions/index.html">Auctions</a>
+            <a class="nav-link ${pathname === "/auction/allAuctions/" ? "active" : ""}" href= "/auction/allAuctions/">Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/profile/login/" ? "active" : ""}" href="/profile/login/index.html">Log in</a>
+            <a class="nav-link ${pathname === "/profile/login/" ? "active" : ""}" href="/profile/login/">Log in</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ${pathname === "/profile/register/" ? "active" : ""}" href="/profile/register/index.html">Register</a>
+            <a class="nav-link ${pathname === "/profile/register/" ? "active" : ""}" href="/profile/register/">Register</a>
           </li>
           <div class="containerSearch">
             <form class="d-flex" id="search">
