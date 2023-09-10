@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NorAutionOff a auctionhouse online - Semesterproject 2. Register new user.">
     <title>Nor Auction Off|Register</title>
-    <link rel="shortcut icon" type="image/png" href="/img/Favicon – lite.jpeg">
+    <link rel="shortcut icon" type="img/png" href="/img/Favicon – lite.jpeg">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
     <script src="/src/js/index.mjs" defer type="module"></script>
@@ -19,31 +19,34 @@
             <div class="container-fluid" id="menu"></div>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <h2 class="m-5">Register</h2>
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <form id="registerForm">
                     <fieldset>
                         <div class="form-group m-4 pb-3">
-                            <label for="" class="pb-2">Username</label>
-                            <input class="form-control bg-light" type="text" name="name" required pattern="^[\w]+$"
-                                title="User name must not contain punctuation symbols apart from underscore (_).">
+                            <label for="name" class="pb-2">Username</label>
+                            <input id="name" class="form-control bg-light" type="text" name="name" required pattern="^[\w]+$"
+                                title="User name must not contain punctuation symbols apart from underscore (_)."
+                                autocomplete="off">
                         </div>
                         <div class="form-group m-4 pb-3">
-                            <label for=""class="pb-2" >Email</label>
-                            <input class="form-control bg-light" type="email" name="email" required
+                            <label for="email"class="pb-2">Email</label>
+                            <input id="email" class="form-control bg-light" type="email" name="email" required
                                 pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                                title="The email must be a valid stud.noroff.no email address.">
+                                title="The email must be a valid stud.noroff.no email address."
+                                 autocomplete="off">
                         </div>
                         <div class="form-group m-4 pb-3">
-                            <label for="" class="pb-2">Password</label>
-                            <input class="form-control bg-light" type="password" name="password" required minlength="8"
-                                title="The password value must be at least 8 characters.">
+                            <label for="password" class="pb-2">Password</label>
+                            <input id="password" class="form-control bg-light" type="password" name="password" required minlength="8"
+                                title="The password value must be at least 8 characters."
+                                autocomplete="off">
                         </div>
                         <div class="form-group m-4 pb-3">
                             <label for="media" class="pb-2">Avatar URL</label>
-                            <textarea class="form-control bg-light" type="avatar" name="avatar" rows="1"></textarea>
+                            <textarea id="media" class="form-control bg-light" name="media" rows="1" autocomplete="off"></textarea>
                         </div>
                         <div id="message"></div>
                         <div id="loginButton" class="text-center m-5"><a href="/profile/login" class="btn btn-light m-4 w-50">Login</a></div>

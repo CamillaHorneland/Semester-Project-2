@@ -25,8 +25,9 @@ export default function buildMenu(pathname) {
           </li>
           <div class="containerSearch">
             <form class="d-flex" id="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-secondary searchBtn" type="submit">Search</button>
+               <label for="searchInput" class="visually-hidden">Search</label>
+               <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+               <button class="btn btn-secondary searchBtn" type="submit">Search</button>
             </form>
           </div>
         </ul>
@@ -51,9 +52,10 @@ export default function buildMenu(pathname) {
             <a class="nav-link ${pathname === "/profile/register/" ? "active" : ""}" href="/profile/register/">Register</a>
           </li>
           <div class="containerSearch">
-            <form class="d-flex" id="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-secondary searchBtn" type="submit">Search</button>
+             <form class="d-flex" id="search">
+               <label for="searchInput" class="visually-hidden">Search</label>
+               <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+               <button class="btn btn-secondary searchBtn" type="submit">Search</button>
             </form>
           </div>
         </ul>

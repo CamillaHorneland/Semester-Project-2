@@ -30,12 +30,14 @@
                             <label for="email" class="pb-2">Email</label>
                             <input id="email" class="form-control bg-light" type="email" name="email" required
                                 pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                                title="The email must be a valid stud.noroff.no email address.">
+                                title="The email must be a valid stud.noroff.no email address."
+                                autocomplete="off">
                         </div>
                         <div class="form-group m-4 pb-3">
                             <label for="password" class="pb-2">Password</label>
-                            <input class="form-control bg-light" type="password" name="password" required minlength="8"
-                                title="The password value must be at least 8 characters.">
+                            <input id="password" class="form-control bg-light" type="password" name="password" required minlength="8"
+                                title="The password value must be at least 8 characters."
+                                autocomplete="off">
                         </div>
                         <div class="d-flex justify-content-center m-5">
                             <button class="btn btn-light text-center w-50 m-5">Log in</button>
