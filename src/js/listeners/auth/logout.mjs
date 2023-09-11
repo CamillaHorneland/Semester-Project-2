@@ -8,7 +8,7 @@ export function setLogoutListener() {
             
             storage.remove("token");
             storage.remove("profile");
-            location.href = "../../../../index.html";
+            location.href = "/index.html";
         });
     }
 }

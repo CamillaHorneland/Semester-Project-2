@@ -1,13 +1,17 @@
-import { isLoggedIn } from "../storage/index.mjs";
+import { isLoggedIn } from "../storage/isLoggedIn.mjs";
 
 export function redirectBasedOnLogin(pathname) {
 	if (isLoggedIn()) {
-		if (pathname === "/profile/login/index.html" || pathname === "/profile/register/index.html") {
-			location.href = "/index.html";
+		console.log("Is logged in...");
+		if (pathname === "/profile/login/" || pathname === "/profile/register/index.html") {
 		}
 	} else {
-		if (pathname === "/index.html" || pathname === "/index.html") {
-			location.href = "/index.html";
+		console.log("Not logged in...");
+		if (pathname === "/index" || pathname === "/index.html") {
 		}
 	}
 }
+
+
+
+
