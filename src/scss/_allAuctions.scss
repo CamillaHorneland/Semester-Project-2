@@ -1,11 +1,12 @@
 .auction {
-    margin: 30px;
+    margin-bottom: 50px;
     border: 3px solid $light;
+    background-color: #fcfbfb;
 }
 
 .media-info-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 30px;
     width: 100%;
 }
@@ -14,6 +15,10 @@
     text-align: center;
     width: 100%;
     margin-top: 40px;
+}
+
+.auction h4 {
+    margin: 20px;
 }
 
 .auction .media img {
@@ -30,13 +35,14 @@
     margin: 30px;
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 900px) {
+    
     .media-info-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
-  
+
 }
