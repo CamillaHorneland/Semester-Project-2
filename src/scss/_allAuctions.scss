@@ -9,6 +9,7 @@
     flex-direction: row;
     margin: 30px;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .auction h3 {
@@ -18,7 +19,7 @@
 }
 
 .auction h4 {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .auction .media img {
@@ -35,6 +36,10 @@
     margin: 30px;
 }
 
+.info {
+    margin-top: 80px;
+}
+
 @media (max-width: 900px) {
     
     .media-info-container {
@@ -43,6 +48,15 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .info,
+    .media {
+        text-align: center;
+        margin: 0;
+       
     }
 
 }

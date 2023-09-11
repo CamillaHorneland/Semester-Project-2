@@ -10,26 +10,43 @@ export function auctionTemplate(auctionData) {
   mediaInfoContainer.classList.add("media-info-container");
 
 
-  if (auctionData.media) {
-    const media = document.createElement("div");
-    media.classList.add("media");
+if (auctionData.media) {
+  const media = document.createElement("div");
+  media.classList.add("media");
 
-    const image = document.createElement("img");
-    image.src = auctionData.media;
-    image.alt = `Image from ${auctionData.title}`;
-    // image.style.maxWidth = "100%";
-    // image.style.width = "100%";
-    media.appendChild(image);
+  const image = document.createElement("img");
+  image.src = auctionData.media;
+  image.alt = `Image from ${auctionData.title}`;
+  image.onerror = function() {
+    image.src = "/img/gavel.jpeg"; 
+    image.alt = `Backup Image for ${auctionData.title}`;
+  };
 
-    mediaInfoContainer.appendChild(media);
-  }
+  media.appendChild(image);
+
+  mediaInfoContainer.appendChild(media);
+} else {
+  const backupImage = document.createElement("img");
+  backupImage.src = "/img/gavel.jpeg"; 
+  backupImage.alt = `Image from ${auctionData.title}`;
+  mediaInfoContainer.appendChild(backupImage);
+}
+
+// console.log(auctionData.id);
 
   const info = document.createElement("div");
   info.classList.add("info");
 
   const description = document.createElement("h4");
+
+if (auctionData.description) {
+  
   description.innerText = auctionData.description;
-  info.appendChild(description);
+} else {
+  description.innerText = "This is a cool item";
+}
+
+info.appendChild(description);
 
   const created = document.createElement("p");
   created.innerText = `Created: ${auctionData.created}`;
@@ -42,6 +59,19 @@ export function auctionTemplate(auctionData) {
   mediaInfoContainer.appendChild(info);
   auction.appendChild(mediaInfoContainer);
 
+  const seeBidsLink = document.createElement("a");
+  seeBidsLink.href = `/auction/spesificAuctions?id=${auctionData.id}`;
+  seeBidsLink.classList.add("btn", "btn-light", "mt-3", "w-50");
+  
+  const seeBidsText = document.createElement("h6");
+  seeBidsText.innerText = "See bids";
+  
+  seeBidsLink.appendChild(seeBidsText);
+  info.appendChild(seeBidsLink);
+ console.log(seeBidsLink);
+  // <a href="/auction/spesificAuctions?id=${auctionData.id}" class="btn btn-primary mx-2 m-3 w-30">
+  // <p>See bids</p>
+// </a>
   return auction;
 }
 
