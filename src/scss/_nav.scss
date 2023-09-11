@@ -18,8 +18,11 @@ header {
     color: #D0D9D9;
 }
 
-.navbar-toggler-image {
+.navbar-toggler-image,
+.navbar-toggler {
     width: 80px;
+    border: none;
+    margin-right: 15px;
 }
 
 .navbar-toggler:focus {

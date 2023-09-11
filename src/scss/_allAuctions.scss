@@ -1,0 +1,42 @@
+.auction {
+    margin: 30px;
+    border: 3px solid $light;
+}
+
+.media-info-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    width: 100%;
+}
+
+.auction h3 {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.auction .media img {
+    width: 50%;
+    height: auto;
+    width: 100%;
+    border: 1px solid $light;
+}
+
+.info,
+.media {
+    text-align: left;
+    width: 50%;
+    margin: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .media-info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+  
+}
