@@ -5,7 +5,11 @@ import { redirectBasedOnLogin } from "./helpers/index.mjs";
 export default function router() {
   const pathname = window.location.pathname;
 
-  console.log(pathname);
+  var auctionId = parseInt(pathname.split('/').reverse()[0]);
+  if(!isNaN(auctionId))
+    auctionId = "";
+
+  console.log('Pathname:', pathname);
 
   redirectBasedOnLogin(pathname);
 	buildMenu(pathname);
@@ -21,16 +25,14 @@ export default function router() {
     case '/auction/allAuctions/':
         listeners.displayAuctionsListener()
       break;
-    }
+    case '/auction/specificAuction/':
+        listeners.displaySingleAuctionListener()
+      break;
+   }
 }
 
 
 
-  
 
-
-  // var postId = parseInt(path.split('/').reverse()[0]);
-  // if(!isNaN(auctionId))
-  //   auctiontId = '';
   
 
