@@ -45,13 +45,60 @@ export function singleAuctionTemplate(specificAuctionData) {
   created.innerText = `Created: ${specificAuctionData.created}`;
   text.appendChild(created);
 
-  const updated = document.createElement("p");
-  updated.innerText = `Updated: ${specificAuctionData.updated}`;
-  text.appendChild(updated);
+  const endsAt = document.createElement("p");
+  endsAt.innerText = `Ends: ${specificAuctionData.endsAt}`;
+  text.appendChild(endsAt);
+ 
+  const amount = document.createElement("h4");
+  amount.innerText = `Bids: ${specificAuctionData._count.bids}`;
+
+  const bids = document.createElement("ul");
+  
+if (specificAuctionData.bids && specificAuctionData.bids.length > 0) {
+  specificAuctionData.bids.forEach((bid) => {
+    const bidItem = document.createElement("li");
+    bidItem.innerText = `${bid.bidderName} ${bid.amount}`;
+    bids.appendChild(bidItem);
+  });
+} else {
+  const noBidsItem = document.createElement("li");
+  noBidsItem.innerText = "No bids yet";
+  bids.appendChild(noBidsItem);
+}
+
+const sellerInfo = document.createElement("div");
+sellerInfo.classList.add("sellerInfo");
+
+const seller = document.createElement("h6");
+seller.innerText = `Seller: ${specificAuctionData.seller.name}`;
+
+ const sellerMedia = document.createElement("div");
+  sellerMedia.classList.add("sellerMedia");
+
+  const sellerImage = document.createElement("img");
+  sellerImage.src = specificAuctionData.seller.avatar; 
+  sellerImage.alt = `Seller Image for ${specificAuctionData.seller.name}`;
+  sellerImage.onerror = function() {
+    sellerImage.src = "/img/profile.png"; 
+    sellerImage.alt = `Backup Seller Image for ${specificAuctionData.seller.name}`;
+  };
+
+  sellerMedia.appendChild(sellerImage);
+  sellerInfo.appendChild(seller);
+  sellerInfo.appendChild(sellerMedia);
+
+text.appendChild(sellerInfo);
+
+
+sellerInfo.appendChild(seller);
 
   spesAuction.appendChild(specificContainer);
   spesAuction.appendChild(description);
   spesAuction.appendChild(text);
+  spesAuction.appendChild(amount);
+  spesAuction.appendChild(bids);
+  spesAuction.appendChild(sellerInfo);
+
 
   return spesAuction;
 }
@@ -72,5 +119,3 @@ export function renderSpecificAuctionTemplate(specificAuctionDataList) {
     specificAuctionDiv.appendChild(emptyResult);
   }
 }
-
-

@@ -52,14 +52,16 @@ info.appendChild(description);
   created.innerText = `Created: ${auctionData.created}`;
   info.appendChild(created);
 
-  const updated = document.createElement("p");
-  updated.innerText = `Updated: ${auctionData.updated}`;
-  info.appendChild(updated);
+  const endsAt = document.createElement("p");
+  endsAt.innerText = `Ends: ${auctionData.endsAt}`;
+  info.appendChild(endsAt);
+  console.log(endsAt);
 
   mediaInfoContainer.appendChild(info);
   auction.appendChild(mediaInfoContainer);
 
   const seeBidsLink = document.createElement("a");
+  seeBidsLink.id = "seeBids";
   seeBidsLink.href = `/auction/specificAuction/?id=${auctionData.id}`;
   seeBidsLink.classList.add("btn", "btn-light", "mt-3", "w-50");
   

@@ -8,12 +8,14 @@ export async function getSpecificAuction(id) {
   if (!id) {
     throw new Error("Listings requires a auctionID");
   }
+
+  const extraFlag = "?_bids=true&_seller=true";
   
-  const specificAuctionURL = `${API_AUCTION_URL}${action}/${id}`;
- 
+  const specificAuctionURL = `${API_AUCTION_URL}${action}/${id}${extraFlag}`;
+   
  const response = await authFetch(specificAuctionURL, {
     method
-  })
+  });
 
   const json = await response.json();
 
