@@ -1,0 +1,118 @@
+#specificAuction {
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    text-align: center;
+}
+
+.spesAuction {
+    border: 2px solid $light; 
+    --bs-gutter-x: 0rem;
+}
+
+.specific {
+    background-color: $light;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.specific img {
+    max-width: 600px;
+    margin: 30px;
+}
+
+.description {
+    margin:30px;
+    padding-bottom: 30px;
+}
+
+.text {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.bidHeader {
+    text-align: left;
+    margin-left: 80px;
+}
+
+.bids-list {
+    text-align: left;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.bids-list li {
+    text-decoration: underline $primaryDark;
+    margin: 30px;
+}
+
+.bids-list li span {
+    margin: 60px;
+}
+
+.sellerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.sellerMedia img {
+    max-width: 200px;
+}
+
+.sellerDiv,
+.sellerImage {
+    margin: 40px;
+}
+
+.sellerDiv {
+    display: inline-block;
+    text-align: left;
+}
+
+@media (max-width: 999px) {
+
+    #specificAuction {
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .specific img {
+        max-width: 400px;
+        margin: 20px;
+    }
+
+    .sellerDiv,
+    .sellerImage {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .sellerInfo {
+         display: flex;
+         flex-direction: column-reverse;
+         padding: 40px;
+    }
+
+    .sellerDiv {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .specific img {
+        max-width: 200px;
+        margin: 20px;
+    }
+
+
+}

@@ -43,21 +43,34 @@ if (auctionData.media) {
 
 if (auctionData.description) {
   
-  description.innerText = auctionData.description;
+  description.innerText = `Description: ${auctionData.description}`;
 } else {
-  description.innerText = "This is a cool item";
+  description.innerText = "Description: This is a cool item";
 }
 
 info.appendChild(description);
 
-  const created = document.createElement("p");
-  created.innerText = `Created: ${auctionData.created}`;
-  info.appendChild(created);
+function formatTimeDifference(endTime) {
+  const currentTime = new Date();
+  const timeDifference = endTime - currentTime;
 
-  const endsAt = document.createElement("p");
-  endsAt.innerText = `Ends: ${auctionData.endsAt}`;
-  info.appendChild(endsAt);
-  console.log(endsAt);
+  if (timeDifference <= 0) {
+    return "Auction has ended";
+  }
+
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  return `Auction ends: ${days}d ${hours}h ${minutes}m`;
+}
+
+const endsAtDate = new Date(auctionData.endsAt);
+
+const endsAt = document.createElement("p");
+endsAt.innerText = formatTimeDifference(endsAtDate);
+info.appendChild(endsAt);
+
 
   mediaInfoContainer.appendChild(info);
   auction.appendChild(mediaInfoContainer);
