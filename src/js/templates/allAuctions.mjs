@@ -1,3 +1,5 @@
+import { isLoggedIn } from "../storage/index.mjs";
+
 export function auctionTemplate(auctionData) {
   const auction = document.createElement("div");
   auction.classList.add("auction");
@@ -60,18 +62,26 @@ info.appendChild(description);
   mediaInfoContainer.appendChild(info);
   auction.appendChild(mediaInfoContainer);
 
-  const seeBidsLink = document.createElement("a");
-  seeBidsLink.id = "seeBids";
-  seeBidsLink.href = `/auction/specificAuction/?id=${auctionData.id}`;
-  seeBidsLink.classList.add("btn", "btn-light", "mt-3", "w-50");
-  
-  // console.log(auctionData);
-  const seeBidsText = document.createElement("h6");
-  seeBidsText.innerText = "See bids";
-  
-  seeBidsLink.appendChild(seeBidsText);
-  info.appendChild(seeBidsLink);
-  // console.log(seeBidsLink);
+ if (isLoggedIn()) {
+    const seeBidsLink = document.createElement("a");
+    seeBidsLink.id = "seeBids";
+    seeBidsLink.href = `/auction/specificAuction/?id=${auctionData.id}`;
+    seeBidsLink.classList.add("btn", "btn-light", "mt-3", "w-50");
+
+    const seeBidsText = document.createElement("h6");
+    seeBidsText.innerText = "See bids";
+
+    seeBidsLink.appendChild(seeBidsText);
+    info.appendChild(seeBidsLink);
+   } else {
+    const loginLink = document.createElement("a");
+    loginLink.id = "loginToView";
+    loginLink.href = "/profile/login";
+    loginLink.classList.add("btn", "btn-light", "mt-3", "w-50");
+    loginLink.innerText = "Login to view bids";
+
+    info.appendChild(loginLink);
+   }
 
   return auction;
 }
