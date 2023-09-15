@@ -4,7 +4,7 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/listings";
 
 export async function getAllAuctions() {
-  console.log(API_AUCTION_URL);
+ 
   const updateAllAutionsURL = `${API_AUCTION_URL}${action}`;
 
     try {
