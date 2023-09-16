@@ -6,3 +6,4 @@ export default function displayMessage(type, message, target) {
       ${message}
     </div>`;
 }
+

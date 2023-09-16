@@ -27,6 +27,7 @@ export default function router() {
       break;
     case '/auction/specificAuction/':
         listeners.displaySingleAuctionListener()
+        listeners.bidListener()
       break;
    }
 }
