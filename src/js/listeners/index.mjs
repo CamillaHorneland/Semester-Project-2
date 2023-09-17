@@ -4,3 +4,4 @@ export * from "./auth/logout.mjs";
 export * from "./auction/getAllAuctions.mjs";
 export * from "./auction/getSpecificAuction.mjs";
 export * from "./auction/bid.mjs";
+export * from "./user/createAuction.mjs";

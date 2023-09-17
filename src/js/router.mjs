@@ -29,6 +29,9 @@ export default function router() {
         listeners.displaySingleAuctionListener()
         listeners.bidListener()
       break;
+    case '/profile/createAuction/':
+        listeners.createAuctionFormListener()
+      break;
    }
 }
 

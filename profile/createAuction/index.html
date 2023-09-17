@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NorAutionOff a auctionhouse online - Semesterproject 2. Create Auction.">
+    <title>Nor Auction Off|Create Auction</title>
+    <link rel="shortcut icon" type="img/png" href="/img/Favicon – lite.jpeg">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="/dist/css/index.css" />
+    <script src="/src/js/index.mjs" defer type="module"></script>
+</head>
+<body>
+    <header class="primary-bg">
+        <div class="containerName">
+            <h1 class="text-center"><a href="/index.html">Nor AUCTION Off</a></h1>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid" id="menu"></div>
+        </nav>
+    </header>
+    <main class="container">
+        <h2 class="m-5">Create Auction</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form id="createAuction">
+                    <fieldset>
+                        <div class="form-group m-4 pb-3">
+                            <label for="title" class="pb-2">Title for Auction</label>
+                            <input id="title" class="form-control bg-light" type="text" name="title" required pattern="^[\w]+$"
+                                title="Auction title must not contain any characters other than underscore (_)">
+                        </div>
+                        <div class="form-group m-4 pb-3">
+                            <label for="description" class="pb-2">Description of the Auction</label>
+                            <input id="description" class="form-control bg-light" type="text" name="description" required
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group m-4 pb-3">
+                            <label for="media_url" class="pb-2">Image/Media URL</label>
+                            <input id="media_url" class="form-control bg-light" type="url" name="media_url" required
+                                pattern="https?://.*" title="Please enter a valid URL starting with http:// or https://"
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group m-4 pb-3">
+                            <label for="deadline_date" class="pb-2">Select Auction End Date</label>
+                            <input id="deadline_date" class="form-control bg-light" type="date" name="deadline_date" required
+                                autocomplete="off">
+                        </div>
+                        <div id="message"></div>
+                        <div id="createButton" class="text-center m-5">
+                            <button class="btn btn-light m-4 w-50" type="submit">Post Auction</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="light-bg text-center">
+        <h1 class="text-center h1footer"><a href="/index.html">Nor AUCTION Off</a></h1>
+        <a href="mailto:support@example.com" class="m-5 support">Contact support</a>
+        <h6 class="m-5">©Nor AUCTION Off</h6>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>
