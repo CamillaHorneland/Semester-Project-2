@@ -32,6 +32,10 @@ export default function router() {
     case '/profile/createAuction/':
         listeners.createAuctionFormListener()
       break;
+    case '/profile/user/':
+        listeners.displayMyProfileListener()
+        listeners.updateAvatarListener()
+      break;
    }
 }
 
