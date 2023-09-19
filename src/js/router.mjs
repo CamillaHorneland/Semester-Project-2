@@ -18,20 +18,26 @@ export default function router() {
   switch (pathname) {
     case '/profile/register/':
       listeners.setRegisterFormListener()
-      break;
+      return;
     case '/profile/login/':
         listeners.setLoginFormListener()
-      break;
+      return;
     case '/auction/allAuctions/':
         listeners.displayAuctionsListener()
-      break;
+     return;
     case '/auction/specificAuction/':
         listeners.displaySingleAuctionListener()
         listeners.bidListener()
-      break;
+      return;
     case '/profile/createAuction/':
         listeners.createAuctionFormListener()
-      break;
+      return;
+    case '/profile/user/':
+        listeners.displayMyProfileListener()
+        listeners.updateAvatarListener()
+        listeners.displayMyListingsListener()
+        listeners.displayMyBidsListener()
+      return;
    }
 }
 
