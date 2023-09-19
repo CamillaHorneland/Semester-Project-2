@@ -29,7 +29,7 @@ export async function updateAvatarListener() {
                     displayMessage("danger", "Error with avatar update: " + json.errors[0].message, "#message");
                 }
             } catch (error) {
-                console.error("Error creating auction:", error.message);
+                console.error("Error creating avatar:", error.message);
             }
         });
     } catch (error) {

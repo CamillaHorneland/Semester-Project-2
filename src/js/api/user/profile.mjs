@@ -12,13 +12,13 @@ export async function getMyProfile() {
     const response = await authFetch(updateAuctionProfileURL, {
         method
     });
-    console.log(updateAuctionProfileURL);
+    // console.log(updateAuctionProfileURL);
 
     if (response.ok) {
         const contentType = response.headers.get("content-type");
         if (contentType && contentType.includes("application/json")) {
             const json = await response.json();
-            console.log("Profile data:", json);
+            // console.log("Profile data:", json);
             return json;
         } else {
             console.error("Server response is not JSON");
