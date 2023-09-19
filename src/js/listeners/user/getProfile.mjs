@@ -1,6 +1,7 @@
 import { getMyProfile } from "../../api/index.mjs";
 import { myProfileTemplate } from "../../templates/myProfile.mjs";
 import displayMessage from "../../ui/common/displayMessage.mjs";
+import { setupAvatarUpdateListener } from "../../listeners/user/avatarUpdate.mjs";
 
 export async function displayMyProfileListener() {
     window.addEventListener("DOMContentLoaded", async function () {
@@ -10,6 +11,7 @@ export async function displayMyProfileListener() {
 
             if (profileDataList) {
                 myProfileTemplate(profileDataList, profileContainer);
+                setupAvatarUpdateListener()
                 // console.log("Profile data:", profileDataList);
             } else {
                 throw new Error("Unable to retrieve profile data.");
