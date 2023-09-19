@@ -34,7 +34,6 @@ export default function router() {
       return;
     case '/profile/user/':
         listeners.displayMyProfileListener()
-        listeners.updateAvatarListener()
         listeners.displayMyListingsListener()
         listeners.displayMyBidsListener()
       return;
