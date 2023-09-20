@@ -21,7 +21,7 @@ export function myBidsTemplate(bidData) {
     media.src = "/img/Favicon – lite.jpeg";
     media.alt = "Default image"; 
   }
-console.log(bidData.listing.media);
+
   const endsAtElement = document.createElement("p");
   endsAtElement.classList.add("card-timeEnd");
   endsAtElement.innerText = formatAuctionEndTime(bidData.listing.endsAt);
