@@ -1,67 +1,72 @@
-export function myBidsTemplate(bidsData) {
-
+export function myBidsTemplate(bidData) {
   const card = document.createElement("div");
-  card.classList.add("card");
+  card.classList.add("bid-card");
 
-  const cardBody = document.createElement("div");
-  cardBody.classList.add("card-body");
+  const cardBids = document.createElement("div");
+  cardBids.classList.add("bid-card-img");
 
-  const title = document.createElement("h5");
-  title.classList.add("card-title");
-  title.innerText = bidsData.title;
-
-  const description = document.createElement("p");
-  description.classList.add("card-text");
-  description.innerText = bidsData.description;
-
-   const media = document.createElement("img");
-    if (bidsData.media) {
-        media.src = bidsData.media;
-        media.alt = `${bidsData.name}`;
+  const media = document.createElement("img");
+    if (bidData.listing.media) {
+        media.src = bidData.listing.media;
+        media.alt = `${bidData.listing.name}`;
     } else {
-       media.src = "/img/Favicon – lite.jpeg"; 
+       media.src = "/img/gavel.jpeg"; 
         media.alt = `Default image`;
     }
     
-  const endsAtElement = document.createElement("p");
-  endsAtElement.classList.add("card-timeEnd");
-  endsAtElement.innerText = formatAuctionEndTime(bidsData.endsAt);
+  const title = document.createElement("h5");
+  title.classList.add("bid-card-title");
+  title.innerText = bidData.listing.title; 
 
+  const amount = document.createElement("h5");
+  amount.classList.add("bid-card-amount");
+  amount.innerText = bidData.amount;
 
-  function formatAuctionEndTime(endsAt) {
-  const endTime = new Date(endsAt);
-  const now = new Date();
+  const endAtElement = document.createElement("p");
+  endAtElement.classList.add("bid-card-enddAt");
+  endAtElement.innerText = formatAuctionEndTime(bidData.listing.endsAt);
 
-  if (endTime < now) {
-    return "Auction has ended";
+  function formatAuctionEndTime(endAt) {
+    const endAtDate = new Date(endAt);
+    const now = new Date();
+
+    if (endAtDate < now) {
+      return "Auction has ended";
+    }
+
+    const timeDifference = endAtDate - now;
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let formattedTime = "Auction ends in ";
+
+    if (days > 0) {
+      formattedTime += `${days}d `;
+    }
+
+    if (hours > 0 || days > 0) {
+      formattedTime += `${hours}h `;
+    }
+
+    formattedTime += `${minutes}m`;
+
+    return formattedTime;
   }
 
-  const timeDifference = endTime - now;
-  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seeBidsLink = document.createElement("a");
+  seeBidsLink.id = "seeBids";
+  seeBidsLink.href = `/auction/specificAuction/?id=${bidData.listing.id}`;
+  seeBidsLink.innerText = "See Auction";
+  seeBidsLink.classList.add("btn", "btn-light", "m-2", "mb-5");
 
-  let formattedTime = "Auction ends in ";
+  cardBids.appendChild(media);
+  cardBids.appendChild(title);
+  cardBids.appendChild(amount);
+  cardBids.appendChild(endAtElement);
+  cardBids.appendChild(seeBidsLink);
 
-  if (days > 0) {
-    formattedTime += `${days}d `;
-  }
-
-  if (hours > 0 || days > 0) {
-    formattedTime += `${hours}h `;
-  }
-
-  formattedTime += `${minutes}m`;
-
-  return formattedTime;
-}
-
-  cardBody.appendChild(title);
-  cardBody.appendChild(description);
-  cardBody.appendChild(media);
-  cardBody.appendChild(endsAtElement);
- 
-  card.appendChild(cardBody);
+  card.appendChild(cardBids);
 
   return card;
 }

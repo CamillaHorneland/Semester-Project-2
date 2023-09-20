@@ -1,7 +1,54 @@
+#myProfile {
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    text-align: center;
+    border: 2px solid $light;
+    background-color: $light;
+}
+
+// .profile {
+//     border: 2px solid $light;
+//     background-color: $light;
+//     // --bs-gutter-x: 0rem;
+// }
+
+.profile-name {
+   padding-top: 40px;
+}
+
+.profile-credit {
+    font-weight: bold;
+}
+
+.profile-name,
+.profile-email,
+.profile-credit {
+    margin: 25px;
+}
+
+
 .profile img {
-    width: 200px;
+    width: 400px;
+    margin: 30px;
+    border: 1px solid $dark;
+}
+
+#avatarUpdateForm {
+    border: 2px solid $light;
+    padding: 40px;
+}
+
+#avatarInput {
+    max-width: 400px;
+    margin: 30px auto;
 }
 
 .card img {
-    width: 100px;
+    width: 200px;
+    border: 1px solid $dark;
+}
+
+.bid-card-img img {
+    width: 200px;
 }
