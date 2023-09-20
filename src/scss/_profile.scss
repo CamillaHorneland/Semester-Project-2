@@ -7,12 +7,6 @@
     background-color: $light;
 }
 
-// .profile {
-//     border: 2px solid $light;
-//     background-color: $light;
-//     // --bs-gutter-x: 0rem;
-// }
-
 .profile-name {
    padding-top: 40px;
 }
@@ -44,11 +38,53 @@
     margin: 30px auto;
 }
 
+.profileHistory {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#profileListings,
+#profileBids {
+    flex: 1;
+}
+
+.card {
+    margin: 30px;
+    height: 400px;
+}
+
 .card img {
-    width: 200px;
+    width: 180px;
+    height: 170px;
     border: 1px solid $dark;
 }
 
-.bid-card-img img {
-    width: 200px;
+@media (max-width: 800px) {
+
+    .profileHistory {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px) {
+    
+    .profile img {
+        width: 250px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    .profile img {
+            width: 200px;
+            margin: 0px;
+        }
+    .card {
+        margin: 20px;
+        height: 600px;
+    }
 }
