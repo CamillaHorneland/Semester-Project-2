@@ -57,15 +57,23 @@ export function myListingsTemplate(listingData) {
 }
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.classList.add("btn", "btn-danger", "m-2", "mb-5", "delete-listing");
+  deleteBtn.classList.add("btn", "btn-primary", "m-2", "mb-5", "delete-listing");
   deleteBtn.innerText = "Delete";
   deleteBtn.dataset.id = listingData.id; 
+
+  const seeListingLink = document.createElement("a");
+  seeListingLink.id = "seeListing";
+  seeListingLink.href = `/auction/specificAuction/?id=${listingData.id}`;
+  seeListingLink.innerText = "See Auction";
+  seeListingLink.classList.add("btn", "btn-light", "m-2", "mb-5");
+
 
   cardBody.appendChild(title);
   cardBody.appendChild(description);
   cardBody.appendChild(media);
   cardBody.appendChild(endsAtElement);
   cardBody.appendChild(deleteBtn);
+  cardBody.appendChild(seeListingLink);
 
   card.appendChild(cardBody);
 

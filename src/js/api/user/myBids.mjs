@@ -3,18 +3,26 @@ import { authFetch } from "../authFetch.mjs";
 import * as storage from "../../services/index.mjs";
 
 const action = "/profiles/{name}/bids"; 
+const method = "get";
 
 export async function getMyBids() {
-  const username = storage.load('profile').name;
-  const myProfileBidsURL = `${API_AUCTION_URL}${action}`.replace('{name}', username); 
+  const userProfile = storage.load('profile');
+  const username = userProfile.name; 
+  const extraFlag = "?_listings=true";
+  const myProfileBidsFlagURL = `${API_AUCTION_URL}${action.replace('{name}', username)}${extraFlag}`; 
 
-  const response = await authFetch(myProfileBidsURL);
+  const response = await authFetch(myProfileBidsFlagURL, {
+    method
+  });
+
+  const json = await response.json();
 
   if (response.ok) {
-    const json = await response.json();
     return json;
-  } else {
-    const errorJson = await response.json();
-    throw new Error(errorJson.errors[0].message);
   }
+
+  console.log(json);
+
+  throw new Error(json.errors[0].message);
 }
+

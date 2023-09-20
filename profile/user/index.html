@@ -19,23 +19,21 @@
             <div class="container-fluid" id="menu"></div>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <h2 class="m-5">Profile</h2>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-                <div id="message"></div>
-                <div id="myProfile"></div>
-                <div id="avatarUpdateForm">
-                    <div class="form-group m-4 pb-3">
-                        <label for="avatarInput" class="pb-2">Avatar URL</label>
+        <div class="text-center">
+            <div id="message"></div>
+            <div id="myProfile" class="row"></div>
+            <div id="avatarUpdateForm">
+                <div class="form-group m-4 pb-3">
+                    <label for="avatarInput" class="pb-2">Avatar URL</label>
                         <input type="text" id="avatarInput" class="form-control bg-light" name="avatar" autocomplete="off"
                                 placeholder="Place avatar-URL here">
                         <button id="updateAvatarBtn" class="btn btn-primary mt-2">Update Avatar</button>
-                    </div>
                 </div>
-                <div id="profileListings"></div>
-                <div id="profileBids"></div>
             </div>
+            <div id="profileListings"></div>
+            <div id="profileBids"></div>
         </div>
     </main>
     <footer class="light-bg text-center">
