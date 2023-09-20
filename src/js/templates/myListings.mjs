@@ -1,5 +1,4 @@
 export function myListingsTemplate(listingData) {
-
   const card = document.createElement("div");
   card.classList.add("card");
 
@@ -14,19 +13,14 @@ export function myListingsTemplate(listingData) {
   description.classList.add("card-text");
   description.innerText = listingData.description;
 
-   const media = document.createElement("img");
-    if (listingData.media) {
-        media.src = listingData.media;
-        media.alt = `${listingData.name}`;
-    } else {
-       media.src = "/img/Favicon – lite.jpeg"; 
-        media.alt = `Default image`;
-    }
-    
+  const media = document.createElement("img");
+  media.src = listingData.media;
+  media.alt = listingData.title; 
+ 
+
   const endsAtElement = document.createElement("p");
   endsAtElement.classList.add("card-timeEnd");
   endsAtElement.innerText = formatAuctionEndTime(listingData.endsAt);
-
 
   function formatAuctionEndTime(endsAt) {
   const endTime = new Date(endsAt);
@@ -59,14 +53,12 @@ export function myListingsTemplate(listingData) {
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("btn", "btn-primary", "m-2", "mb-5", "delete-listing");
   deleteBtn.innerText = "Delete";
-  deleteBtn.dataset.id = listingData.id; 
+  deleteBtn.dataset.id = listingData.id;
 
   const seeListingLink = document.createElement("a");
-  seeListingLink.id = "seeListing";
   seeListingLink.href = `/auction/specificAuction/?id=${listingData.id}`;
   seeListingLink.innerText = "See Auction";
   seeListingLink.classList.add("btn", "btn-light", "m-2", "mb-5");
-
 
   cardBody.appendChild(title);
   cardBody.appendChild(description);
@@ -98,3 +90,4 @@ export function renderMyListingsTemplates(listingsDataList, parent) {
     parent.appendChild(emptyResult);
   }
 }
+
