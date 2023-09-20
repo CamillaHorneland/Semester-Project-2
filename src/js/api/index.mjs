@@ -7,4 +7,5 @@ export * from "./user/updateAvatar.mjs";
 export * from "./user/myListings.mjs";
 export * from "./user/delete.mjs";
 export * from "./user/myBids.mjs";
+export * from "./auctions/search.mjs";
 
