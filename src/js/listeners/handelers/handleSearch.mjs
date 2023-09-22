@@ -24,4 +24,14 @@ async function doSearch(event) {
     displayMessage("danger", error, "#message");
     console.log(error);
   }
-}
+} 
+
+
+
+
+
+
+
+
+
+

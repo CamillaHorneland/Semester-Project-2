@@ -20,21 +20,9 @@ header {
 
 .navbar-toggler-icon {
     width: 2em;
-    margin-right: 15px;
-}
-
-.navbar-toggler-icon:focus {
-    box-shadow: none;
-}
-
-.logoutLink {
-    cursor: pointer;
-}
-
-.navbar-nav,
-#search {
-    background-color: $primary;
-    margin-top: 0;
+    height: 2em;
+    color: $dark;
+    // margin: 10px;
 }
 
 #search {
@@ -42,26 +30,34 @@ header {
     height: 45px;
 }
 
+.navbar-nav {
+    background-color: $primary;
+    margin: 0;
+}
+
 
 @media (max-width: 991px) {
 
     .containerSearch {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
     }
 
     #search {
-        width: 50%;   
+        width: 250px;   
         margin-top: 0px; 
         margin-bottom: 20px;
     }
 
-     header {
+    header {
         height: 300px;
     }
-        
+
+    .navbar-nav {
+        margin-top: 3px;
+    }  
 }
 
 @media (max-width: 1005px) {
@@ -71,9 +67,4 @@ header {
     }
 }
 
-@media (max-width: 992px) {
-     #search {
-         width: 250px;
-     }
 
-}
