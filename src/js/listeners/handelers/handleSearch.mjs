@@ -1,8 +1,7 @@
 import { search } from '../../api/index.mjs';
-import { displayMessage } from '../../ui/common/displayMessage.mjs';
-
-import displaySearchResults from '../ui/common/displaySearchResults.js';
-import hideSearchResults from '../ui/common/hideSearchResults.js';
+import displayMessage from "../../ui/common/displayMessage.mjs";
+import displaySearchResults from '../../ui/search/dispalySearchResults.mjs';
+import hideSearchResults from '../../ui/search/hideSearch.mjs';
 
 export default function handleSearch() {
   const input = document.querySelector('#search');
@@ -13,7 +12,7 @@ export default function handleSearch() {
 async function doSearch(event) {
   const tag = event.target.value.trim();
 
-  if (tag.length < 5) {
+  if (tag.length < 3) {
     return hideSearchResults();
   }
 
@@ -22,6 +21,7 @@ async function doSearch(event) {
 
     displaySearchResults(results);
   } catch (error) {
-    displayMessage(error);
+    displayMessage("danger", error, "#message");
+    console.log(error);
   }
 }
