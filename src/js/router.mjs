@@ -1,7 +1,8 @@
 import * as listeners from "./listeners/index.mjs";
 import buildMenu from "./ui/common/buildMenu.mjs";
 import { redirectBasedOnLogin } from "./helpers/index.mjs";
-import handleSearch from "../../listeners/index.mjs";
+import handleSearch from "./listeners/handelers/handleSearch.mjs";
+import handleHideResultsOnDocumentClick from "./listeners/handelers/hideSearchResults.mjs";
 
 export default function router() {
   const pathname = window.location.pathname;
@@ -15,6 +16,7 @@ export default function router() {
   redirectBasedOnLogin(pathname);
 	buildMenu(pathname);
   handleSearch();
+  handleHideResultsOnDocumentClick();
   
   listeners.setLogoutListener();
   switch (pathname) {
