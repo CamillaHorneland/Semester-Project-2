@@ -11,14 +11,17 @@ export function createAuctionFormListener() {
       const title = formData.get("title");
       const description = formData.get("description");
       const media_url = formData.get("media_url");
+      const tagsInput = formData.get("tags");
+      const tags = tagsInput.split(',').map(tag => tag.trim());
       const deadline_date = formData.get("deadline_date");
-      console.log(title, description, media_url, deadline_date);
+      console.log(title, description, media_url, tags, deadline_date);
 
      try {
   const auctionData = {
     title,
     description,
-    media: [media_url], 
+    media: [media_url],
+    tags, 
     endsAt: new Date(deadline_date).toISOString(),
   };
 
