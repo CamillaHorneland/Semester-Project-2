@@ -10,6 +10,7 @@ export async function displayAuctionsListener() {
       
       if (auctionsDataList) {
         renderAllAuctionsTemplates(auctionsDataList, auctionsContainer);
+        renderCaruselTemplate(auctionData, caruselContainer);
       } else {
         throw new Error("Unable to retrieve auction data.");
       }

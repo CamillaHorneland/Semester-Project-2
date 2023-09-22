@@ -26,6 +26,8 @@ export default function router() {
     case '/profile/login/':
         listeners.setLoginFormListener()
       return;
+    case '/index.html':
+        listeners.displayCarousel()
     case '/auction/allAuctions/':
         listeners.displayAuctionsListener()
      return;
