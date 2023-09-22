@@ -18,14 +18,12 @@ header {
     color: #D0D9D9;
 }
 
-.navbar-toggler-image,
-.navbar-toggler {
-    width: 80px;
-    border: none;
+.navbar-toggler-icon {
+    width: 2em;
     margin-right: 15px;
 }
 
-.navbar-toggler:focus {
+.navbar-toggler-icon:focus {
     box-shadow: none;
 }
 
@@ -73,12 +71,9 @@ header {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 992px) {
      #search {
-         flex-direction: column; 
+         width: 250px;
      }
 
-     .searchBtn {
-        margin: 20px;
-     }
 }

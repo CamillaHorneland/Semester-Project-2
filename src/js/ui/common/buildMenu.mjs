@@ -9,7 +9,7 @@ export default function buildMenu(pathname) {
     menu.innerHTML += `
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="/img/nav.png" alt="Toggle navigation" class="navbar-toggler-image">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
@@ -40,7 +40,7 @@ export default function buildMenu(pathname) {
     menu.innerHTML += `
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="/img/nav.png" alt="Toggle navigation" class="navbar-toggler-image">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse navbar-center-bg" id="navbarNav">
         <ul class="navbar-nav text-center">
@@ -55,7 +55,7 @@ export default function buildMenu(pathname) {
           </li>
           <div class="containerSearch">
             <form class="d-flex" role="search">
-					      <input class="form-control me-2" type="search bg-white" placeholder="Search" aria-label="Search" id="search" list="searchResults" />
+					      <input class="form-control me-2 bg-white" type="search" placeholder="Search" aria-label="Search" id="search" list="searchResults" />
 					      <div id="searchResults" class="search-results text-center"><div id="message"></div></div>
 				    </form>
           </div>
