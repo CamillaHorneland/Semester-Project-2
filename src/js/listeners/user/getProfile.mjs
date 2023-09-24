@@ -12,7 +12,6 @@ export async function displayMyProfileListener() {
             if (profileDataList) {
                 myProfileTemplate(profileDataList, profileContainer);
                 setupAvatarUpdateListener()
-                // console.log("Profile data:", profileDataList);
             } else {
                 throw new Error("Unable to retrieve profile data.");
             }

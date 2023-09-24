@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NorAutionOff a auctionhouse online - Semesterproject 2.Home page.">
     <title>Nor Auction Off|Home</title>
-    <link rel="shortcut icon" type="image/ping" href="/img/Favicon – lite.jpeg">
+    <link rel="shortcut icon" type="image/png" href="/img/Favicon – lite.jpeg">
     <link href="/dist/css/index.css" rel="stylesheet" />
     <script src="/src/js/index.mjs"defer type="module" ></script>
 </head>
@@ -55,17 +55,23 @@
                 <h3>It dosent get any easier than this! Sell! Bid! Win!</h3>
             </div>
         </div>
-        <div class="container m-5">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <h4>Last posted auctions:</h4>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <a href="/auction/allAuctions/" class="btn btn-light">See all auctions</a>
-                </div>
+        <div class="container m-5 auctionCarousel">
+            <h4 class="m-5">Auctions:</h4>
+            <div class="m-5">
+                <a href="/auction/allAuctions/" class="btn btn-light">Go to Auction page</a>
             </div>
         </div>
-        <div class="carusel"></div>
+        <div id="carousel" class="carousel slide row" data-bs-ride="carousel" data-interval="4000">
+            <div class="carousel-inner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <img src="/img/left.png" alt="Previous" aria-hidden="true">
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <img src="/img/right.png" alt="Next" aria-hidden="true">
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </main>
     <footer class="light-bg text-center">
         <h1 class="text-center h1footer pb-3"><a href="/index.html">Nor AUCTION Off</a></h1>

@@ -9,32 +9,30 @@ export function auctionTemplate(auctionData) {
   auction.appendChild(title);
 
   const mediaInfoContainer = document.createElement("div");
-  mediaInfoContainer.classList.add("media-info-container");
+mediaInfoContainer.classList.add("media-info-container");
 
+const media = document.createElement("div");
+media.classList.add("media");
 
-if (auctionData.media) {
-  const media = document.createElement("div");
-  media.classList.add("media");
+const image = document.createElement("img");
 
-  const image = document.createElement("img");
-  image.src = auctionData.media;
+if (Array.isArray(auctionData.media) && auctionData.media.length > 0) {
+  image.src = auctionData.media[0];
   image.alt = `Image from ${auctionData.title}`;
-  image.onerror = function() {
-    image.src = "/img/gavel.jpeg"; 
-    image.alt = `Backup Image for ${auctionData.title}`;
-  };
-
-  media.appendChild(image);
-
-  mediaInfoContainer.appendChild(media);
 } else {
-  const backupImage = document.createElement("img");
-  backupImage.src = "/img/gavel.jpeg"; 
-  backupImage.alt = `Image from ${auctionData.title}`;
-  mediaInfoContainer.appendChild(backupImage);
+  image.src = "/img/gavel.jpeg";
+  image.alt = `Backup Image for ${auctionData.title}`;
 }
 
-// console.log(auctionData.id);
+image.onerror = function() {
+  image.src = "/img/gavel.jpeg"; 
+  image.alt = `Backup Image for ${auctionData.title}`;
+};
+
+media.appendChild(image);
+mediaInfoContainer.appendChild(media);
+
+
 
   const info = document.createElement("div");
   info.classList.add("info");

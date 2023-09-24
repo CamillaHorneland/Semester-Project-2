@@ -10,7 +10,7 @@ export default function handleSearch() {
 }
 
 async function doSearch(event) {
-  const tag = event.target.value.trim();
+  const tag = event.target.value.trim().toLowerCase();
 
   if (tag.length < 3) {
     return hideSearchResults();
