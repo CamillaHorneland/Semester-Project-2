@@ -34,7 +34,6 @@ export default function router() {
         const listAuctions = listeners.displayAllAuctions();
         listeners.observeAuctions(listAuctions);
         listAuctions();
-
       break;
     case '/auction/specificAuction/':
         listeners.displaySingleAuctionListener()

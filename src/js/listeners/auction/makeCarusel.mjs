@@ -1,11 +1,11 @@
-import { getAllAuctions } from "../../api/index.mjs";
+import { getCarousel } from "../../api/index.mjs";
 import { isLoggedIn } from "../../storage/index.mjs";
 import displayMessage from "../../ui/common/displayMessage.mjs";
 
 export async function displayCarousel() {
   try {    
     const carouselContainer = document.querySelector(".carousel-inner"); 
-    const auctionsData = await getAllAuctions();
+    const auctionsData = await getCarousel();
     
     if (auctionsData && auctionsData.length > 0) {
       const itemsPerSlide = 4; 
