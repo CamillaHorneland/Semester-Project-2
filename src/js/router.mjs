@@ -27,7 +27,7 @@ export default function router() {
     case '/profile/login/':
         listeners.setLoginFormListener()
       break;
-    case '':
+    case '/':
     case '/index.html':
         listeners.displayCarousel()
       break;
