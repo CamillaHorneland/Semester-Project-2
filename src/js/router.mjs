@@ -22,27 +22,34 @@ export default function router() {
 
   switch (pathname) {
     case '/profile/register/':
+    case '/profile/register/index.html':
       listeners.setRegisterFormListener()
       break;
     case '/profile/login/':
+    case '/profile/login/index.html':
         listeners.setLoginFormListener()
       break;
+    case '/':
     case '/index.html':
         listeners.displayCarousel()
       break;
     case '/auction/allAuctions/':
+    case '/auction/allAuctions/index.html':
         const listAuctions = listeners.displayAllAuctions();
         listeners.observeAuctions(listAuctions);
         listAuctions();
       break;
     case '/auction/specificAuction/':
+    case '/auction/specificAuction/index.html':
         listeners.displaySingleAuctionListener()
         listeners.bidListener()
        break;
     case '/profile/createAuction/':
+    case '/profile/createAuction/index.html':
         listeners.createAuctionFormListener()
        break;
     case '/profile/user/':
+     case '/profile/user/index.html':
         listeners.displayMyProfileListener()
         listeners.displayMyListingsListener()
         listeners.displayMyBidsListener()
