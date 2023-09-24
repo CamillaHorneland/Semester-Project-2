@@ -6,9 +6,7 @@ import { setDeleteListingListener } from "../index.mjs";
 export async function displayMyListingsListener() {
   window.addEventListener("DOMContentLoaded", async function () {
     try {
-      // console.log("displayMyListingsListener");
       const listingsContainer = document.getElementById("profileListings");
-      // console.log(listingsContainer); 
       const listingsDataList = await getMyListings();
       if (listingsDataList) {
         renderMyListingsTemplates(listingsDataList, listingsContainer);

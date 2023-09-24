@@ -14,35 +14,21 @@ export function singleAuctionTemplate(specificAuctionData) {
   const specific = document.createElement("div");
   specific.classList.add("specific");
 
-   if (specificAuctionData.media) {
+  if (Array.isArray(specificAuctionData.media) && specificAuctionData.media.length > 0) {
     const singleMedia = document.createElement("div");
     singleMedia.classList.add("singleMedia");
 
     const image = document.createElement("img");
-    image.src = specificAuctionData.media;
+    image.src = specificAuctionData.media[0]; 
     image.alt = `Image from ${specificAuctionData.title}`;
-    image.onerror = function() {
+
+    image.onerror = function () {
       image.src = "/img/gavel.jpeg";
       image.alt = `Backup Image for ${specificAuctionData.title}`;
     };
 
     singleMedia.appendChild(image);
-
-    const descriptionDiv = document.createElement("div");
-    descriptionDiv.classList.add("description");
-
-    if (specificAuctionData.description) {
-      const description = document.createElement("h3");
-      description.innerText = `Description: ${specificAuctionData.description}`;
-      descriptionDiv.appendChild(description);
-    } else {
-      const defaultDescription = document.createElement("h3");
-      defaultDescription.innerText = "Description: This is a cool item";
-      descriptionDiv.appendChild(defaultDescription);
-    }
-    
     specific.appendChild(singleMedia);
-    specific.appendChild(descriptionDiv);
   } else {
     const backupImage = document.createElement("img");
     backupImage.src = "/img/gavel.jpeg";
@@ -128,7 +114,6 @@ sellerImage.onerror = function() {
   spesAuction.appendChild(amount);
   spesAuction.appendChild(bids);
   spesAuction.appendChild(sellerInfo);
-// text.appendChild(sellerInfo);
 
   return spesAuction;
 }

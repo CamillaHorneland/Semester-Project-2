@@ -19,30 +19,32 @@ export default function router() {
   handleHideResultsOnDocumentClick();
   
   listeners.setLogoutListener();
+
   switch (pathname) {
     case '/profile/register/':
       listeners.setRegisterFormListener()
-      return;
+      break;
     case '/profile/login/':
         listeners.setLoginFormListener()
-      return;
+      break;
     case '/index.html':
         listeners.displayCarousel()
+      break;
     case '/auction/allAuctions/':
-        listeners.displayAuctionsListener()
-     return;
+        listeners.displayAllAuctions()
+      break;
     case '/auction/specificAuction/':
         listeners.displaySingleAuctionListener()
         listeners.bidListener()
-      return;
+       break;
     case '/profile/createAuction/':
         listeners.createAuctionFormListener()
-      return;
+       break;
     case '/profile/user/':
         listeners.displayMyProfileListener()
         listeners.displayMyListingsListener()
         listeners.displayMyBidsListener()
-      return;
+      break;
    }
 }
 

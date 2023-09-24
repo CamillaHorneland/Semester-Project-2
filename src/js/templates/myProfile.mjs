@@ -35,7 +35,7 @@ export function myProfileTemplate(profileDataList) {
         avatar.src = profileDataList.avatar;
         avatar.alt = `Avatar of ${profileDataList.name}`;
     } else {
-        avatar.src = "/img/profile.png"; // Backup-img
+        avatar.src = "/img/profile.png";
         avatar.alt = `Default Avatar`;
     }
 

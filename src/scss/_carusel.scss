@@ -1,0 +1,64 @@
+#carousel {
+    margin-bottom: 70px;
+    height: 100%;
+}
+
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px; 
+    height: 40px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 5px;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+    width: 100%; 
+    height: auto;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    width: 50px;
+    height: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 500px; 
+}
+
+
+.card-title,
+.card-text {
+    flex: 0 0 auto; 
+    margin: 0; 
+    padding: 10px; 
+}
+
+.cardBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.image-container img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
