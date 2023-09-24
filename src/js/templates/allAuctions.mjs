@@ -97,14 +97,17 @@ info.appendChild(endsAt);
   return auction;
 }
 
-export function renderAllAuctionsTemplates(auctionDataList, parent) {
+export function renderAllAuctionsTemplates(auctionDataList, parent, offset) {
+  
   if (auctionDataList.length > 0) {
-    parent.innerHTML = ''; 
     parent.append(...auctionDataList.map(auctionTemplate));
   } else {
-    const emptyResult = document.createElement('h3');
-    emptyResult.innerText = 'No auctions to display';
-    parent.innerHTML = '';
-    parent.append(emptyResult);
+    if(offset == 0) {
+        const emptyResult = document.createElement('h3');
+        emptyResult.innerText = 'No auctions to display';
+        parent.innerHTML = '';
+        parent.append(emptyResult);
+    }
+    
   }
 }
