@@ -33,6 +33,7 @@ export default function router() {
       break;
     case '/auction/allAuctions/':
     case '/auction/allauctions/':
+    case '/auction/all-auctions/':
         const listAuctions = listeners.displayAllAuctions();
         listeners.observeAuctions(listAuctions);
         listAuctions();
