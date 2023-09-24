@@ -82,6 +82,10 @@ Start Live Server to see the project.
 
       npm run start
 
+## Badges
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b8204547-88e2-44ba-9e0c-dd483e1aeed5/deploy-status)](https://app.netlify.com/sites/norauctionoff/deploys)
+
 ## Contact
 
 <a href="mailto:hornikkene@gmail.com?">My Mail</a> 
