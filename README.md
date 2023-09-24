@@ -1,12 +1,6 @@
 # Semester-Project-2
 
-Resource 	URL
-Gantt Chart 	
-Design Prototype 	
-Style Guide 	
-Kanban Board 	
-Repository 	
-Hosted Demo
+<img width="900" alt="Skjermbilde 2023-09-24 kl  14 23 02" src="https://github.com/CamillaHorneland/Semester-Project-2/assets/104870685/3f227c3c-cb53-4ce6-abed-10724c2d6230">
 
 ## Goal
 
