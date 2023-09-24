@@ -27,20 +27,24 @@ export default function router() {
     case '/profile/login/':
         listeners.setLoginFormListener()
       break;
+    case '':
     case '/index.html':
         listeners.displayCarousel()
       break;
     case '/auction/allAuctions/':
+    case '/auction/allauctions/':
         const listAuctions = listeners.displayAllAuctions();
         listeners.observeAuctions(listAuctions);
         listAuctions();
 
       break;
     case '/auction/specificAuction/':
+    case '/auction/specificauction/':
         listeners.displaySingleAuctionListener()
         listeners.bidListener()
        break;
     case '/profile/createAuction/':
+    case '/profile/createauction/':
         listeners.createAuctionFormListener()
        break;
     case '/profile/user/':
