@@ -4,13 +4,14 @@
 
 ## Delivery
 
-Resource 	URL
-Gantt Chart 	
-Design Prototype 	
-Style Guide 	
-Kanban Board 	
-Repository 	
-Hosted Demo
+|Resource|URL
+|---|---
+|Gantt Chart| https://google.com
+|Design Prototype| 	
+|Style Guide |	
+|Kanban Board |	
+|Repository |	
+|Hosted Demo|
 
 ## Goal
 
@@ -42,21 +43,21 @@ The client has specified the following requirements in the form of User Stories:
 
 The company CTO has set the following technical restrictions:
 
-    - Must use an approved CSS Framework
-    - Must be hosted on an approved Static Host
-    - Must use an approved Design Application
-    - Must use an approved Planning Application
+- Must use an approved CSS Framework
+- Must be hosted on an approved Static Host
+- Must use an approved Design Application
+- Must use an approved Planning Application
 
 # Built With:
 
-    - Adobe XD
-    - HTML
-    - CSS
-    - SASS
-    - JavaScript
-    - Bootstrap
-    - [Noroff API](https://docs.noroff.dev/)
-  
+- Adobe XD
+- HTML
+- CSS
+- SASS
+- JavaScript
+- Bootstrap
+- [Noroff API](https://docs.noroff.dev/)
+
 
 # Getting Started
 ## Installing
