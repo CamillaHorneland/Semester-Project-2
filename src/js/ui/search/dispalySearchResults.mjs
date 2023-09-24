@@ -48,7 +48,7 @@ export default function displaySearchResults(results) {
       const seeBidsLink = document.createElement("a");
       seeBidsLink.id = "seeBids";
       seeBidsLink.href = `/auction/specificAuction/?id=${result.id}`;
-      seeBidsLink.classList.add("btn", "btn-light", "mt-3", "w-50");
+      seeBidsLink.classList.add("btn", "btn-primary", "m-5", "w-50");
 
       const seeBidsText = document.createElement("h6");
       seeBidsText.innerText = "See bids";
@@ -59,7 +59,7 @@ export default function displaySearchResults(results) {
       const loginLink = document.createElement("a");
       loginLink.id = "loginToView";
       loginLink.href = "/profile/login";
-      loginLink.classList.add("btn", "btn-light", "mt-3", "w-50");
+      loginLink.classList.add("btn", "btn-primary", "m-5", "w-50");
       loginLink.innerText = "Login to view bids";
 
       resultContainer.appendChild(loginLink);
