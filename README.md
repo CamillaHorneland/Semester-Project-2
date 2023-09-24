@@ -10,10 +10,9 @@
 |Design Prototype Flow 1|https://xd.adobe.com/view/c3cc95b5-0adb-44d4-b39e-c17bdbd6ab67-969f/ 	
 |Design Prototype Flow 2|https://xd.adobe.com/view/04d520b4-e97d-4298-bcf3-6f3b699b3a05-5186/ 
 |Style Guide |https://xd.adobe.com/view/5c57e189-9541-4c88-b0a4-768b4c3e9f8b-0904/
-|Kanban Board |	<img width="921" alt="Skjermbilde 2023-08-30 kl  23 01 32" src="https://github.com/CamillaHorneland/Semester-Project-2/assets/104870685/6b00ba47-118d-4df8-bd79-0bff6776b22c">
-
 |Repository |https://github.com/CamillaHorneland/Semester-Project-2
 |Hosted Demo|https://norauctionoff.netlify.app/
+|Kanban Board |	<img width="921" alt="Skjermbilde 2023-08-30 kl  23 01 32" src="https://github.com/CamillaHorneland/Semester-Project-2/assets/104870685/6b00ba47-118d-4df8-bd79-0bff6776b22c">
 
 ## Goal
 
