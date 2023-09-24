@@ -3,6 +3,7 @@ import { renderAllAuctionsTemplates } from "../../templates/allAuctions.mjs";
 import displayMessage from "../../ui/common/displayMessage.mjs";
 
 export async function displayAllAuctions() {
+
   try {
     const auctionsContainer = document.getElementById("allAuctions");
     const auctionsDataList = await getAllAuctions();
