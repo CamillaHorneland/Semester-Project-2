@@ -1,5 +1,13 @@
 # Semester-Project-2
 
+Resource 	URL
+Gantt Chart 	
+Design Prototype 	
+Style Guide 	
+Kanban Board 	
+Repository 	
+Hosted Demo
+
 ## Goal
 
 To take the skills learned over the past three semesters and create an auction website.
@@ -43,7 +51,39 @@ The company CTO has set the following technical restrictions:
     - SASS
     - JavaScript
     - Bootstrap
-    - [Noroff API](https://docs.noroff.dev/auctionhouse-endpoints/authentication)
+    - [Noroff API](https://docs.noroff.dev/)
+  
+
+# Getting Started
+## Installing
+1.Clone the repo:
+
+     git clone https://github.com/CamillaHorneland/Semester-Project-2.git
+
+## Install dependencies
+
+To run the app, run the following commands:
+
+      npm i
+
+## Build SASS
+
+     npm run build
+
+## Runing
+
+Start Live Server to see the project.
+
+      npm run start
+
+## Contact
+
+<a href="mailto:hornikkene@gmail.com?">My Mail</a> 
+
+<a href="https://portfoliocamillahorneland.netlify.app/">My Portfolio</a>
+
+<a href="https://www.linkedin.com/in/camilla-horneland-706bb5239/">My LinkedIn page</a>    
+   
 
 
      
