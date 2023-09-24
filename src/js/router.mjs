@@ -31,7 +31,10 @@ export default function router() {
         listeners.displayCarousel()
       break;
     case '/auction/allAuctions/':
-        listeners.displayAllAuctions()
+        const listAuctions = listeners.displayAllAuctions();
+        listeners.observeAuctions(listAuctions);
+        listAuctions();
+
       break;
     case '/auction/specificAuction/':
         listeners.displaySingleAuctionListener()
